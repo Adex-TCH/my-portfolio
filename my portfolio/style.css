@@ -1,0 +1,343 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #2f3640, #1a1d23);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    text-decoration: solid;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+#header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 5rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header nav ul {
+    list-style: none;
+    padding: 5px;
+    display: flex;
+  justify-content: space-between;
+}
+
+#header nav ul li {
+    padding: 12px;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #337ab7;
+    border-radius: 20px;
+}
+#header nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #337ab7;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+#header nav ul li:hover::after {
+    transform: scaleX(5);
+}
+#header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s, transform 0.5s;
+}
+#header nav a:hover {
+    color: #050505;
+    transform: translateY(-2px);
+  }
+#header nav ul {
+    transition: transform 0.5s;
+    color: fff;
+    text-decoration: none;
+  }
+  
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-image: linear-gradient(to bottom, #293342, #20926896);
+    color:#fff;
+    border-width: 10px;
+    border-top: 5px;
+    animation: heroAnimation 2s forwards;
+}
+@keyframes heroAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#hero img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 10em;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-display: auto;
+    animation:sectionAnimation 1s forwards;
+    text-align:center;
+    color: rgb(247, 255, 255);
+    position: relative;
+    text-transform: capitalize;
+    text-decoration: blink;
+}
+section h2 {
+  font-family: fantasy;
+  font-style: normal;
+  background: rgb(245, 255, 253);
+  border-radius: 50px;
+  border-width: thick;
+  position: relative;
+  color: #2b2c2e;
+  box-shadow: 0 0 10px rgba(53, 35, 60, 0.945);
+}
+@keyframes fadein{
+  to {
+    opacity: 1;
+  }
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .project {
+    background-color: #f1f2f3;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    opacity: 0;
+    animation:projectAnimation 1s forwards;
+    color: #000;
+  }
+.btn-github {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 100px;
+  font-weight: 800;
+  place-content: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  line-height: 1rem;
+  background-color: rgba(41, 141, 129, 0.786);
+  box-shadow: inset 0 1px 0 0 rgba(8, 134, 125, 0.04);
+  color: 08707e;
+}
+
+.btn-github:hover {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(250, 236, 81, 0.08);
+  color: #03d2fc;
+  transform: translate(0, -0.25rem);
+  background-color: rgba(251, 64, 64, 0.185);
+}
+
+  @keyframes projectAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+  .project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .project {
+    transition: transform 0.2s; 
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  .project h3 {
+    margin-top: 0;
+  }
+  
+  .project p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .project a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .project a:hover {
+    color: #23527c;
+  }
+
+.project-card {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.button {
+  position:absolute;
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #508c99;
+  color: #111010;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  padding: 10px;
+  border-radius: 200px;
+  cursor: pointer;    
+  margin: 5px;
+  text-decoration: none;
+  animation: backToTopAnimation 5s; 
+}
+@keyframes backToTopAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+#contact ul li {
+  margin: 10px;
+}
+
+#contact ul li a {
+  color: #337ab7;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+#contact ul li a:hover {
+  color: #23527c;
+}
+
+#contact ul li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+#contact {
+  background-image: radial-gradient(farthest-corner at 50% 100%, #2f3640, #1a1d23);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact h2 {
+  margin-top: 0;
+  background-color: wheat;
+  opacity: 10;
+  color: #782200;
+}
+
+#contact p {
+  font-size: 16px;
+  color: #f7f0f0;
+} 
+.button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  margin-left: 1350px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+.button:hover {
+  width: 100px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(61, 82, 103);
+  align-items: center;
+}
+.button:hover .svgIcon {
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  font-size: 0px;
+}
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
